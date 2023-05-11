@@ -1,0 +1,65 @@
+"""Course Administrator
+Der Course Administrator ist ein Programm, das zur Verwaltung von Daten von Kursen verwendet wird. Anfangs kann es Daten von Studierenden und Vortragenden verwalten.
+
+Eingabe von Stammdaten (allgemeine Stammdaten):
+
+Name
+Rolle (Teilnehmer:in, Lektor:in, Tutor:in)
+Adresse
+Straße
+Hausnummer
+Postleitzahl
+Der Course Administrator hat ein Textinterface, durch das der Benutzer/Benutzerin durch Eintippen von Befehlen navigieren kann. Z.B. Könnte einer der ersten Fragen (das Hauptmenü) sein:
+
+(T)eilnehmende oder (V)ortragende verwalten: V
+Durch Eingabe von T, t, V oder v kann eine Auswahl getroffen werden. Wird Teilnehmende gewählt, könnte die nächste Frage des Systems sein:
+
+Teilnehmende: (E)ditieren, (A)nlegen oder (L)öschen oder (Z)urück ins Hauptmenü: A
+Durch Eingabe von A oder a wird Anlegen gewählt, worauf das System die Daten des neu anzulegenden Teilnehmers erfragt, z.B. Name, Straße, Hausnummer und Postleitzahl. Die Rolle des Teilnehmenden wird automatisch auf Teilnehmender gesetzt.
+
+Durch Eingabe von Z oder z kommt man zurück ins Hauptmenü.
+
+Bei der Lösung sollten verwendet werden:
+
+Zumindest ein Modul
+Fehlerbehandlung und Fehler, die mit raise ausgelöst werden.
+"""
+Classes:
+                          Account                                                                   Course               Class
+    Admin                                    User
+                                Student               Teacher
+
+Account is the Parent class, it will hold data and methods Admins and Users will both be able to perform.
+
+Admin class is a child class of Account class. Only the Admin is going to be permitted to perform certain actions.
+There will be 3 levels of Admins:1,2,3(1 is the strongest, they can do everything, 2 and 3 only certain things.)
+Will will achieve this by saving the "levels" into the database and by certain methods check what level the Admin has.
+-The Admin(1,2,3) can change everyones personal data: name, address, telephone number etc.
+-The Admin(1) can delete a Teacher or Student from the system.
+-The Admin (1,2) can change data about Courses.
+-The Admin (1) can delete Courses.
+
+User class is a child class of Account class.
+There are things both users can do and have, those things will come here.
+-Students and Teachers can only change their own data. Aka a f.e.: A student can change their own address in or phone number in the system,
+but they cannot change anything about other users.
+-Every user can look up an other user and save as a txt file some info about them...
+-Users can look up their own classes.
+-Between Users and classes there will be a many to many relation, since a User can belong to many classes, and a class can belong to many users.
+
+
+Student class is a clid class of User.(therefore User is both a parent class and a child class...)
+
+
+Theacher class is a child class of User.--||--
+
+
+Course class
+Start time, end time, tacher name, class name, start date etc can be saved here
+
+Class/Location
+Means the physical classes/locations.
+Equipment information that can be found in a class, class name (f.e:1.32), building name(f.e:B) etc can be saved here
+
+
+
