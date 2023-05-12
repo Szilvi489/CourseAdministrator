@@ -16,6 +16,8 @@ def connect():
         print(f"Error connecting to the database: {err}")
         return None
 
+
+#CRUD functionalities
 # Create a new record in the Account table
 def create_account(cursor, account_id, name, address, telephone,email,password,username):
     query = "INSERT INTO Account (account_id, name, address, telephone,email,password,username) VALUES (%s, %s, %s, %s, %s, %s, %s)"
@@ -48,7 +50,7 @@ def read_accountsFormatted(cursor):
         print()  # Print an empty line between records
 
 def read_users(cursor):
-    query = "SELECT *FROM Account JOIN User ON User.account_id = Account.account_id"
+    query = "SELECT * FROM Account JOIN User ON User.account_id = Account.account_id"
     cursor.execute(query)
     users = cursor.fetchall()
     for user in users:

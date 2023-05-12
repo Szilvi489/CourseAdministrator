@@ -11,7 +11,7 @@ def testDatabase():
 
     # Test CRUD operations
     #data.create_account(cursor, 13, "Szilvia Varga", "123 Stuwer Strasse", "676-1234")
-    #data.update_account(cursor, 1, "456 Oak Ave")
+    data.update_account(cursor, 3, "456 Oak Ave")
     #data.delete_account(cursor, 11)
     #data.read_accounts(cursor)
     #data.read_accountsFormatted(cursor)

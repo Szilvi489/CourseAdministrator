@@ -30,6 +30,7 @@ Classes:
                                 Student               Teacher
 
 Account is the Parent class, it will hold data and methods Admins and Users will both be able to perform.
+In the account following data will be saved:first_name,last_name, email address (will look like this:emma_wattson@fh-campus.com), username (will look like this: emma_watson), password
 
 Admin class is a child class of Account class. Only the Admin is going to be permitted to perform certain actions.
 There will be 3 levels of Admins:1,2,3(1 is the strongest, they can do everything, 2 and 3 only certain things.)
