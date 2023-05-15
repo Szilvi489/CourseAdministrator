@@ -1,0 +1,6 @@
+The data.json file describes a very similar concept than what we had before
+in the database.
+We have : accounts
+In "accounts", the "type" value tells us what kind of account is it.(admin, teacher,student).
+Only those accounts have "level" in it, that are "type":"admin".
+
